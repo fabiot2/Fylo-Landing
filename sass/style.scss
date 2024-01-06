@@ -295,19 +295,20 @@ main {
 .wrapper__subscribe {
     background-color: $Desaturated-Blue;
     color: $White;
+    padding-inline: 2rem;
 }
 
 .subscribe {
-    @include flex-preset;
     @include width-preset;
     padding-block: 6rem 7rem;
     text-align: center;
+    gap: 2rem;
 
     .section__info {
         order: 1;
+        
         margin-block-start: 0;
-        gap: 2rem;
-
+        
 
         @media screen and (min-width:$Query-tablet) {
             width: 70%;
@@ -316,6 +317,7 @@ main {
         @media screen and (min-width:$Query-computer) {
             width: 100%;
             max-width: 51.4rem;
+            text-align: start;
         }
     }
 
@@ -332,6 +334,7 @@ main {
         @media screen and (min-width:$Query-tablet) {
             width: 100%;
             max-width: 55rem;
+            text-align: start;
 
             .button__main {
                 width: 20rem;
@@ -345,8 +348,13 @@ main {
     .section__title {
         color: $White;
     }
-    @media screen and (min-width:$Query-tablet) {
-        padding-inline: 10rem 8rem;
+
+    .section__text {
+        margin-block: 0;
     }
+
+    // @media screen and (min-width:$Query-computer) {
+    //     padding-inline: 2rem;
+    // }
     
 }

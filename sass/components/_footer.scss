@@ -1,3 +1,95 @@
-footer {
+.footer {
     background-color: $Very-Dark-Blue;
+    width: 100%;
+    color: $White;
+
+    &__logo {
+        color: $White;
+        fill: $White!important;
+    }
+
+    .attribution {
+        width: 100%;
+        text-align: center;
+        padding-block: 1rem;
+        font-size: 1.2rem;
+
+        a {
+            color: white;
+        }
+    }
+    
+    &__menu {
+        margin-block-start: 6rem;
+
+        @media screen and (min-width:$Query-computer) {
+            margin-block-start: 0rem;
+    }
+    }
+
+    &__menu ul li {
+        margin-block-start: 2.1rem;
+    }
+
+    &__menu ul li:nth-child(1) {
+        margin-block-start: 0rem;
+    }
+
+    &__social {
+        align-self: center;
+        
+        ul {
+            @include flex-preset (row,row);
+            gap: 1rem;
+            
+            li {
+                margin:0;
+            }
+        }
+
+    }
+
+    &__icon-social {
+        display: inline-block;
+        width: 2.9rem;
+        height: 2.9rem;
+        border-radius: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+
+        @media screen and (min-width:$Query-computer) {
+            width: 3.2rem;
+            height: 3.2rem;
+        }
+
+        &-facebook {
+            background-image: url('.../images/favicon-32x32.png');
+        }
+    }
+}
+
+.wrapper__footer {
+    @include width-preset;
+    @include flex-preset (column,row, center, flex-start);
+    padding-block:6rem;
+    padding-inline:3rem;
+    text-align: start;
+
+    @media screen and (min-width:$Query-tablet) {
+        padding-block:10rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    @media screen and (min-width:$Query-computer) {
+        justify-content: space-between;
+        text-align: start;
+        align-items: start;
+    }
+
+    a {
+        color: $White;
+    }
 }
