@@ -1,0 +1,106 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  font-family: "Open Sans", sans-serif;
+  color: hsl(243, 87%, 12%);
+  background-color: #ffffff;
+  min-width: 375px;
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}
+
+H1 {
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  font-family: "Open Sans", sans-serif;
+  color: hsl(243, 87%, 12%);
+}
+@media screen and (min-width: 600px) {
+  H1 {
+    font-size: 3.8rem;
+    line-height: 5.9rem;
+  }
+}
+
+H2 {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-family: "Raleway", sans-serif;
+  color: hsl(243, 87%, 12%);
+}
+@media screen and (min-width: 600px) {
+  H2 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}
+
+H3, h4, h5, h6 {
+  font-size: 2rem;
+  line-height: 2rem;
+  font-family: "Raleway", sans-serif;
+  color: hsl(243, 87%, 12%);
+}
+@media screen and (min-width: 600px) {
+  H3, h4, h5, h6 {
+    font-size: 3.4rem;
+    line-height: 3.4rem;
+  }
+}
+
+figure {
+  width: 32rem;
+  height: auto;
+}
+
+img {
+  width: 32rem;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  min-width: 32.8rem;
+  width: 32.8rem;
+  margin: 0 auto;
+  text-align: center;
+  flex-direction: column;
+  justify-content: "";
+  align-content: "";
+  display: flex;
+  flex-wrap: nowrap;
+}
+@media screen and (min-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 128rem;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+}

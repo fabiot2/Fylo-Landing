@@ -1,0 +1,72 @@
+@mixin H1-preset {
+    font-size:$h1-size-mobile;
+    line-height:$h1-height-mobile;
+    font-family:$Body-family;
+    color: $Very-Dark-Blue;
+
+    @media screen and (min-width:$Query-tablet) {
+        font-size: $h1-size-pc;
+        line-height: $h1-height-pc;
+    }
+}
+
+@mixin H2-preset {
+    font-size:$h2-size-mobile;
+    line-height:$h2-height-mobile;
+    font-family:$Header-family;
+    color: $Very-Dark-Blue;
+
+    @media screen and (min-width:$Query-tablet) {
+        font-size: $h2-size-pc;
+        line-height: $h2-height-pc;
+    }
+}
+
+@mixin H3-preset {
+    font-size:$h3-size-mobile;
+    line-height:$h3-height-mobile;
+    font-family:$Header-family;
+    color: $Very-Dark-Blue;
+
+    @media screen and (min-width:$Query-tablet) {
+        font-size: $h3-size-pc;
+        line-height: $h3-height-pc;
+    }
+}
+
+@mixin Body-preset {
+    font-size:$Body-size-mobile;
+    line-height:$Body-height-mobile;
+    font-family:$Body-family;
+    color: $Very-Dark-Blue;
+
+    @media screen and (min-width:$Query-tablet) {
+        font-size: $Body-size-pc;
+        line-height: $Body-height-pc;
+    }
+}
+
+@mixin width-preset {
+    min-width: 32.8rem;
+    width: 32.8rem;
+    margin: 0 auto;
+    text-align: center;
+
+    @media screen and (min-width:$Query-tablet) {
+        width: 100%;
+        max-width: 128rem;
+        text-align: left;
+    }
+}
+
+@mixin flex-preset ($direction:column, $justc:center, $alignc:flex-start, $direction-query:row) {
+    flex-direction: $direction;
+    justify-content: $justc;
+    align-content: $alignc;
+    display: flex;
+    flex-wrap: nowrap;
+
+    @media screen and (min-width:$Query-tablet) {
+        flex-direction: $direction-query;
+    }
+}

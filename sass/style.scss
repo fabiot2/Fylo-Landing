@@ -1,0 +1,13 @@
+@import 'mixins';
+@import 'globals';
+
+@import './components/buttons';
+@import './components/navbar';
+@import './components/footer';
+
+
+body {
+    @include width-preset;
+    @include flex-preset(column,'','',column);
+}
+
