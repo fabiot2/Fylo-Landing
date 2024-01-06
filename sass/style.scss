@@ -2,12 +2,351 @@
 @import 'globals';
 
 @import './components/buttons';
+@import './components/forms';
 @import './components/navbar';
 @import './components/footer';
 
 
 body {
-    @include width-preset;
-    @include flex-preset(column,'','',column);
+    @include flex-preset(column,column);
 }
 
+main {
+    width: 100%;
+}
+
+.section {
+    
+    @include flex-preset (column,row);
+    width: 100%;
+
+    &__info {
+        order:2;
+        max-width: 31rem;
+        width: 100%;
+        margin-block-start: 4rem;
+
+
+        @media screen and (min-width:$Query-tablet) {
+            max-width: 55rem;
+        }
+
+        @media screen and (min-width:$Query-computer) {
+            order:1;
+            max-width: 100%;
+            width: 50%;
+            margin-block-start: 0rem;
+        }
+    }
+
+    &__title {
+        margin-block-end: 2rem;
+
+        @media screen and (min-width:$Query-tablet) {
+            margin-block-end: 2.5rem;
+        }
+    }
+
+    &__text {
+        margin-block-end: 2rem;
+    }
+
+    &__media {
+        order:1;
+        max-width: 30rem;
+        width: 100%;
+
+        @media screen and (min-width:$Query-tablet) {
+            width: 70%;
+            max-width: 63.6rem;
+            max-height: 47.9rem;
+
+        }
+
+        @media screen and (min-width:$Query-computer) {
+            order:2;
+            width: 50%;
+            max-width: 63.6rem;
+            max-height: 47.9rem;
+        }
+    }
+}
+
+.wrapper {
+    background-image: url('../images/bg-curve-mobile.svg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media screen and (min-width:$Query-tablet) {
+        background-image: url('../images/bg-curve-desktop.svg');
+    }
+
+    &--productive {
+        @include width-preset;
+        @include flex-preset;
+    }
+}
+
+
+
+.hero {
+    @include width-preset;
+    padding-block-end: 13.4rem;
+    padding-inline: 2rem;
+
+    @media screen and (min-width:$Query-tablet) {
+        padding-block-end: 25.7rem;
+    }
+
+    .section__text {
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+        font-weight: bold;
+
+        @media screen and (min-width:$Query-computer) {
+            font-size: 1.9rem;
+            line-height: 2.4rem;
+            font-weight: bold;
+        }
+    }
+
+    .form {
+
+        @media screen and (min-width:$Query-computer) {
+      
+            input {
+                margin-inline-end: 1.8rem;
+            }
+            &__text {
+                width: 60%;
+            }
+    
+            &__button {
+                width: 30%;
+            }
+        }
+    }
+
+    .section__media {
+        margin-block-start: 8rem;
+        @media screen and (min-width:$Query-computer) {
+            margin-block-start: 0rem;
+        }
+       
+    }
+}
+
+.productive {
+    background-color: $Background-Blue;
+    width: 100%;
+    padding-inline: 2rem;
+    padding-block: 5rem 10rem;
+
+    @media screen and (min-width:$Query-computer) {
+        padding-block: 10rem;
+    }
+
+    .testimonial-card {
+        width: 28rem;
+        height: 17rem;
+        margin: 0 auto;
+        margin-block-start: 4rem;
+        background-color: $White;
+        border-radius: 0.4rem;
+        padding: 1.8rem 2.6rem;
+        box-shadow: 0px 0px 10px hsl(0, 0%, 90%);
+        text-align: start;
+
+        &__icon {
+            width: 1.1rem;
+            height: 1rem;
+        }
+
+        &-text {
+            font-size: 1.1rem;
+            line-height: 1.8rem;
+            letter-spacing: -0.121px;
+        }
+
+        &-author {
+            margin-block-start: 1.6rem;
+            display: flex;
+            align-items: center;
+        }
+
+        &__img {
+            width: 2.4rem;
+            height: 2.4rem;
+            display: inline-block;
+            
+            img {
+                border-radius: 50%;
+            }
+        }
+
+        &-info {
+            display: inline-block;
+            color: $Desaturated-Blue; 
+            margin-inline-start: 0.8rem;
+        }
+
+        &__name {
+            font-size: 0.9rem;
+            line-height: 0.9rem;
+            font-weight: bold;
+            font-family: $Header-family;
+            letter-spacing: 0.63px;
+            display: block;
+        }
+
+        &__position {
+            font-size: 0.6rem;
+            line-height: 0.6rem;
+            font-family: $Body-family;
+            display: block;
+        }
+
+        @media screen and (min-width:$Query-tablet) {
+            width: 35.6rem;
+            height: 21.8rem;
+            margin-block-start: 4.4rem;
+            border-radius: 0.6rem;
+            padding: 2rem 3rem;
+
+
+            &__icon {
+                width: 1.8rem;
+                height: 1.3rem;
+            }
+    
+            &-text {
+                font-size: 1.4rem;
+                line-height: 2.3rem;
+            }
+    
+            &-author {
+                margin-block-start: 2.1rem;
+            }
+    
+            &__img {
+                width: 3.2rem;
+                height: 3.2rem;
+                
+                img {
+                    border-radius: 50%;
+                }
+            }
+    
+            &__name {
+                font-size: 1.1rem;
+                line-height: 1.1rem;
+            }
+    
+            &__position {
+                font-size: 0.8rem;
+                line-height: 0.8rem;
+            }
+        }
+
+        @media screen and (min-width:$Query-computer) {
+            margin:0;
+            margin-block-start: 4.4rem;
+        }
+
+    }
+
+    .section__info {
+        @media screen and (min-width:$Query-computer) {
+            width: 60%;
+        }
+    }
+
+    &__button {
+        color: $Moderate-Cyan;
+        border-bottom:1px solid $Moderate-Cyan;
+        display: inline-block;
+        padding: 0.3rem;
+        font-size: 1.2rem;
+        
+
+        @media screen and (min-width:$Query-computer) {
+            font-size: 1.6rem;
+        }
+    
+        &-icon {
+            display: inline-block;
+            margin-inline-start: 0.8rem;
+            margin-block-start: -0.2rem ;
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius: 50%;
+
+            background: url('../images/icon-arrow.svg') {
+                position: center;
+                repeat:no-repeat;
+                size:cover;
+            }
+        }
+    }
+}
+
+
+.wrapper__subscribe {
+    background-color: $Desaturated-Blue;
+    color: $White;
+}
+
+.subscribe {
+    @include flex-preset;
+    @include width-preset;
+    padding-block: 6rem 7rem;
+    text-align: center;
+
+    .section__info {
+        order: 1;
+        margin-block-start: 0;
+        gap: 2rem;
+
+
+        @media screen and (min-width:$Query-tablet) {
+            width: 70%;
+        }
+
+        @media screen and (min-width:$Query-computer) {
+            width: 100%;
+            max-width: 51.4rem;
+        }
+    }
+
+    .section__form {
+        order: 2;
+        width: 100%;
+        max-width: 32rem;
+
+        .button__main {
+            box-shadow: 0 0 3px hsl(243, 97%, 12%);
+        }
+        
+
+        @media screen and (min-width:$Query-tablet) {
+            width: 100%;
+            max-width: 55rem;
+
+            .button__main {
+                width: 20rem;
+            } 
+        }
+
+        @media screen and (min-width:$Query-computer) {
+            max-width: 47.8rem;
+        }
+    }
+    .section__title {
+        color: $White;
+    }
+    @media screen and (min-width:$Query-tablet) {
+        padding-inline: 10rem 8rem;
+    }
+    
+}

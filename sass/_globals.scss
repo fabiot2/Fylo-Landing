@@ -2,14 +2,17 @@
 
 $Very-Dark-Blue: hsl(243, 87%, 12%);
 $Desaturated-Blue: hsl(238, 22%, 44%);
+$Background-Blue:#F9F8FE;
 $Bright-Blue: hsl(224, 93%, 58%);
+$Light-Blue:#6B9BFF;
 $Moderate-Cyan: hsl(170, 45%, 43%);
 $Light-Grayish-Blue: hsl(240, 75%, 98%);
 $Light-Gray: hsl(0, 0%, 75%);
 $White:#ffffff;
 
 $Query-mobile: 375px;
-$Query-tablet: 600px;
+$Query-tablet: 620px;
+$Query-computer: 1000px;
 $Query-desktop: 1440px;
 
 $Header-family: 'Raleway', sans-serif;
@@ -55,10 +58,9 @@ html {
 }
 
 body {
+    min-width: $Query-mobile;
     @include Body-preset;
     background-color: $White;
-    min-width: $Query-mobile;
-    width: 100%;
 }
 
 H1 {
@@ -79,7 +81,7 @@ figure {
 }
 
 img {
-    width: 32rem;
+    width: 100%;
     height: auto;   
 }
 

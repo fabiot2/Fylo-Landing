@@ -1,0 +1,40 @@
+.header {
+    width: 100%;
+    @include flex-preset (row, row, space-between, center);
+    @include width-preset;
+    height: 7.1rem;
+    padding-inline: 2rem;
+
+    @media screen and (min-width:$Query-tablet) {
+        height: 18rem;
+
+    }
+
+    &__logo {
+        width: 8.2rem;
+        height: 2.3rem;
+
+        img {
+            width: 100%;
+        }
+
+        @media screen and (min-width:$Query-tablet) {
+            width: 16.8rem;
+            height: 4.7rem;
+        }
+    }
+
+    &__menu ul li{
+        display: inline-block;
+        margin-inline-start: 2.5rem;
+
+        @media screen and (min-width:$Query-tablet) {
+            margin-inline-start: 5.7rem;
+        }
+
+        a {
+            color: $Very-Dark-Blue;
+        }
+    }
+
+}

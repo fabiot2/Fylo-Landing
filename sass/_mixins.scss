@@ -47,26 +47,34 @@
 }
 
 @mixin width-preset {
-    min-width: 32.8rem;
-    width: 32.8rem;
+    min-width: $Query-mobile;
     margin: 0 auto;
     text-align: center;
 
+
     @media screen and (min-width:$Query-tablet) {
         width: 100%;
+    }
+
+    @media screen and (min-width:$Query-computer) {
         max-width: 128rem;
         text-align: left;
     }
 }
 
-@mixin flex-preset ($direction:column, $justc:center, $alignc:flex-start, $direction-query:row) {
+@mixin flex-preset ($direction:column,$direction-query:row, $justc:center, $alignc:center) {
     flex-direction: $direction;
     justify-content: $justc;
-    align-content: $alignc;
+    align-items: $alignc;
     display: flex;
-    flex-wrap: nowrap;
 
     @media screen and (min-width:$Query-tablet) {
+        justify-content: space-between;
+    }
+
+    @media screen and (min-width:$Query-computer) {
         flex-direction: $direction-query;
+        // justify-content: space-between;
+        // align-items: center;
     }
 }
