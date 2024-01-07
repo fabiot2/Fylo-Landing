@@ -240,21 +240,18 @@ a {
 }
 .footer__icon-social {
   display: inline-block;
+  text-align: center;
   width: 2.9rem;
   height: 2.9rem;
+  border: 1px solid white;
+  padding: 0.2rem;
   border-radius: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 @media screen and (min-width: 1000px) {
   .footer__icon-social {
     width: 3.2rem;
     height: 3.2rem;
   }
-}
-.footer__icon-social-facebook {
-  background-image: url(".../images/favicon-32x32.png");
 }
 
 .wrapper__footer {
