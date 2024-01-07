@@ -1,5 +1,4 @@
 .header {
-    width: 100%;
     @include flex-preset (row, row, space-between, center);
     @include width-preset;
     height: 7.1rem;
@@ -7,7 +6,6 @@
 
     @media screen and (min-width:$Query-tablet) {
         height: 18rem;
-
     }
 
     &__logo {

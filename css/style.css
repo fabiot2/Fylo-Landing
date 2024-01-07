@@ -120,7 +120,6 @@ a {
 }
 
 .header {
-  width: 100%;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -305,23 +304,6 @@ a {
   color: #ffffff;
 }
 
-body {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-@media screen and (min-width: 620px) {
-  body {
-    justify-content: space-between;
-  }
-}
-@media screen and (min-width: 1000px) {
-  body {
-    flex-direction: column;
-  }
-}
-
 main {
   width: 100%;
 }
@@ -394,45 +376,15 @@ main {
   }
 }
 
-.wrapper {
+.wrapper__hero {
   background-image: url("../images/bg-curve-mobile.svg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
 }
 @media screen and (min-width: 620px) {
-  .wrapper {
+  .wrapper__hero {
     background-image: url("../images/bg-curve-desktop.svg");
-  }
-}
-.wrapper--productive {
-  min-width: 375px;
-  margin: 0 auto;
-  text-align: center;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-@media screen and (min-width: 620px) {
-  .wrapper--productive {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .wrapper--productive {
-    max-width: 128rem;
-    text-align: left;
-  }
-}
-@media screen and (min-width: 620px) {
-  .wrapper--productive {
-    justify-content: space-between;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .wrapper--productive {
-    flex-direction: row;
   }
 }
 
@@ -496,6 +448,36 @@ main {
   width: 100%;
   padding-inline: 2rem;
   padding-block: 5rem 10rem;
+}
+.productive .wrapper__productive {
+  min-width: 375px;
+  margin: 0 auto;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+@media screen and (min-width: 620px) {
+  .productive .wrapper__productive {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .productive .wrapper__productive {
+    max-width: 128rem;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 620px) {
+  .productive .wrapper__productive {
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .productive .wrapper__productive {
+    flex-direction: row;
+  }
 }
 @media screen and (min-width: 1000px) {
   .productive {

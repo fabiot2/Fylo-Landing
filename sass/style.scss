@@ -6,11 +6,6 @@
 @import './components/navbar';
 @import './components/footer';
 
-
-body {
-    @include flex-preset(column,column);
-}
-
 main {
     width: 100%;
 }
@@ -72,7 +67,7 @@ main {
     }
 }
 
-.wrapper {
+.wrapper__hero {
     background-image: url('../images/bg-curve-mobile.svg');
     background-position: bottom;
     background-repeat: no-repeat;
@@ -81,14 +76,7 @@ main {
     @media screen and (min-width:$Query-tablet) {
         background-image: url('../images/bg-curve-desktop.svg');
     }
-
-    &--productive {
-        @include width-preset;
-        @include flex-preset;
-    }
 }
-
-
 
 .hero {
     @include width-preset;
@@ -142,6 +130,11 @@ main {
     width: 100%;
     padding-inline: 2rem;
     padding-block: 5rem 10rem;
+
+    .wrapper__productive {
+        @include width-preset;
+        @include flex-preset;
+    }
 
     @media screen and (min-width:$Query-computer) {
         padding-block: 10rem;
@@ -304,6 +297,8 @@ main {
     text-align: center;
     gap: 2rem;
 
+
+    
     .section__info {
         order: 1;
         
@@ -351,10 +346,5 @@ main {
 
     .section__text {
         margin-block: 0;
-    }
-
-    // @media screen and (min-width:$Query-computer) {
-    //     padding-inline: 2rem;
-    // }
-    
+    }    
 }
